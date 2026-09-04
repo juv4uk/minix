@@ -1,0 +1,13 @@
+; tasks.my — durable task plan for minix (own fork, HECI/MINIX hardware
+; research line). Same alist shape as sibling repos' tasks.my.
+
+((tasks . (
+  ("MINIX-1-PCI-8086-A13A-DISCOVERY" . (
+    (priority . 8.5)
+    (capabilities . (minix hardware pci heci research))
+    (origin . minix)
+    (context . "Per ecosystem/memory/PINNED-DIRECTIVES-2026-09-03.md item 5: Linux MEI/HECI Missions 1-3C complete, Linux now frozen as oracle/reference. MINIX-0 source reconnaissance complete. Do not port the Linux MEI driver; do not jump directly to HECI transport.")
+    (description . "MINIX-1: independently find PCI device 8086:a13a (the HECI/MEI controller) from within MINIX itself and expose its BDF (bus/device/function), BAR0, and IRQ -- using MINIX's own PCI enumeration facilities, not by copying Linux's approach. This is an educational/reconnaissance step: the owner does the first discovery pass himself per the established discipline (agent orients, does not hand over a finished driver).")
+    (done . ())
+  ))
+)))
